@@ -6,10 +6,9 @@ root.geometry("270x240+650+250")
 
 
 def start():
-    name_vacansion = entry.get()
-    number_or_email = entry.get()
-
-    hh.logic_start()
+    a = entry.get()
+    b = entry.get()
+    hh.logic_start(a, b)
 
 
 # текст вверху
@@ -23,8 +22,8 @@ entry.place(anchor=N, relx=0.5, rely=0.1, height=30, width=230)
 textsp2 = Label(text="Введите номер или Email:", foreground="green")
 textsp2.place(anchor=N, relx=0.5, rely=0.2, height=30, width=300)
 # поле ввода вакансии
-entry = Entry(background='#90EE90')
-entry.place(anchor=N, relx=0.5, rely=0.3, height=30, width=230)
+entry2 = Entry(background='#90EE90')
+entry2.place(anchor=N, relx=0.5, rely=0.3, height=30, width=230)
 
 # кнопка поиска вакансий
 batton = Button(text="Откликаться на вакансии", background='#90EE90', command=start)
