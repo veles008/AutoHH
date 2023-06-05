@@ -16,8 +16,6 @@ capabilities['pageLoadStrategy'] = 'eager'
 # Instantiate Chrome driver with the configured options and capabilities
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options, desired_capabilities=capabilities)
 
-# Open the URL
-driver.get("https://hh.ru")
-
-# Find and click the element without waiting for the full page load
-driver.find_element(By.XPATH, '//*[@id="HH-React-Root"]/div/div[2]/div/div/div/div/div[5]/a').click()
+def logic_start():
+    driver.get("https://hh.ru")
+    driver.find_element(By.XPATH, '//*[@id="HH-React-Root"]/div/div[2]/div/div/div/div/div[5]/a').click()
