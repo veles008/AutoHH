@@ -6,6 +6,9 @@ root.geometry("270x240+650+250")
 
 
 def start():
+    name_vacansion = entry.get()
+    number_or_email = entry.get()
+
     hh.logic_start()
 
 
