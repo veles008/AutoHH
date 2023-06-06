@@ -1,6 +1,5 @@
 from tkinter import *
 import hh
-import tkinter.messagebox as mb
 
 root = Tk()
 root.title("Auto_HH.RU")
@@ -10,7 +9,6 @@ root.geometry("270x240+650+250")
 def show_number():
     num = batton_number_vvod.get()
     hh.logic_start(num)
-
 
 # номер телефона
 batton_number = Button(text="Номер телефона", background='#90EE90', font='Times 12', command=show_number)
