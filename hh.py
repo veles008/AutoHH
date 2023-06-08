@@ -41,3 +41,14 @@ def logik_cod(b):
     button = driver.find_element(By.CLASS_NAME, u"verification-submit")
     driver.implicitly_wait(10)
     ActionChains(driver).move_to_element(button).click(button).perform()
+
+
+def search(c):
+    time.sleep(2)
+    driver.find_element(By.XPATH,
+                        '//*[@id="HH-React-Root"]/div/div[2]/div[2]/div/div[1]/div/div/form/div/div[3]/a/span/svg')
+    time.sleep(1)
+    driver.find_element(By.XPATH,
+                        '//*[@id="HH-React-Root"]/div/div[3]/div[1]/div/div/div[1]/form/div[1]/div[2]/div[1]/fieldset/input').send_keys(
+        c)
+    driver.execute_script("window.scrollTo(0, 1080)")

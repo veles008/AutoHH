@@ -16,6 +16,11 @@ def vvod():
     hh.logik_cod(blon)
 
 
+def logic_vac():
+    ger = entry.get()
+    hh.search(ger)
+
+
 # номер телефона
 batton_number = Button(text="Номер телефона", background='#90EE90', font='Times 12', command=show_number)
 batton_number.place(relx=0, rely=0.1, height=50, width=130, )
@@ -34,7 +39,7 @@ batton_number_kod.place(relx=0.5, rely=0.32, height=50, width=135)
 entry = Entry(background='#90EE90')
 entry.place(anchor=N, relx=0.5, rely=0.65, height=30, width=260)
 
-batton = Button(text="Откликаться на вакансии", background='#90EE90', font='Times 14')
+batton = Button(text="Откликаться на вакансии", background='#90EE90', font='Times 14', command=logic_vac)
 batton.place(anchor=N, relx=0.5, rely=0.8, height=50, width=300, )
 
 # пометка
