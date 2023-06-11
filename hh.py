@@ -20,7 +20,7 @@ capabilities['pageLoadStrategy'] = 'eager'
 # Instantiate Chrome driver with the configured options and capabilities
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options,
                           desired_capabilities=capabilities)
-
+driver.maximize_window()
 
 def logic_start(a):
     driver.get("https://hh.ru")
@@ -45,10 +45,5 @@ def logik_cod(b):
 
 def search(c):
     time.sleep(2)
-    driver.find_element(By.XPATH,
-                        '//*[@id="HH-React-Root"]/div/div[2]/div[2]/div/div[1]/div/div/form/div/div[3]/a/span/svg')
-    time.sleep(1)
-    driver.find_element(By.XPATH,
-                        '//*[@id="HH-React-Root"]/div/div[3]/div[1]/div/div/div[1]/form/div[1]/div[2]/div[1]/fieldset/input').send_keys(
-        c)
-    driver.execute_script("window.scrollTo(0, 1080)")
+    driver.find_element(By.ID, 'a11y-search-input').send_keys(c)
+    driver.find_element(By.CLASS_NAME, 'supernova-search-submit-text').click()
