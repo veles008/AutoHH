@@ -47,3 +47,11 @@ def search(c):
     time.sleep(2)
     driver.find_element(By.ID, 'a11y-search-input').send_keys(c)
     driver.find_element(By.CLASS_NAME, 'supernova-search-submit-text').click()
+    time.sleep(3)
+    while True:
+        driver.find_element(By.XPATH, '//*[@id="a11y-main-content"]/div[2]/div/div[1]/div/div[3]/h3/span/a').click()
+        time.sleep(1)
+        driver.find_element(By.XPATH,
+                            '//*[@id="HH-React-Root"]/div/div[3]/div[1]/div/div/div/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div/a').click()
+        driver.close()
+        time.sleep(1)
